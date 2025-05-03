@@ -16,6 +16,7 @@
 - [Contributing](#contributing)
 - [Security](#security)
 - [License](#license)
+- [Trivy](#trivy)
 
 ## ASH; The *A*utomated *S*ecurity *H*elper
 
@@ -299,3 +300,12 @@ See [CONTRIBUTING](CONTRIBUTING.md#security-issue-notifications) for more inform
 ## License
 
 This library is licensed under the Apache 2.0 License. See the LICENSE file.
+
+## Trivy
+
+[Trivy](https://github.com/aquasecurity/trivy) is now supported for scanning Terraform files for misconfigurations.
+
+**Usage:**
+```sh
+./utils/trivy-scan.sh [report_path] [target_directory]
+```

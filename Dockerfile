@@ -242,3 +242,9 @@ HEALTHCHECK --interval=12s --timeout=12s --start-period=30s \
 
 ENTRYPOINT [ ]
 CMD [ "ash" ]
+
+# Install Trivy
+RUN apt-get update && apt-get install -y wget \
+    && wget https://github.com/aquasecurity/trivy/releases/latest/download/trivy_0.50.0_Linux-64bit.deb \
+    && dpkg -i trivy_0.50.0_Linux-64bit.deb \
+    && rm trivy_0.50.0_Linux-64bit.deb
